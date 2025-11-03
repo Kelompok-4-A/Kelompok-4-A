@@ -22,6 +22,8 @@ Dalam konteks sistem pengambilan keputusan organisasi:
 - **h(n)** adalah estimasi biaya yang dibutuhkan untuk mencapai tujuan.  
 - **f(n) = g(n) + h(n)** → jalur dengan nilai *f(n)* terkecil dianggap sebagai keputusan paling optimal.  
 
+ini rumus nya -> "f(n) = g(n) - h(n)"
+
 Implementasi algoritma ini dalam tugas kelompok dilakukan menggunakan **bahasa pemrograman Python**, karena kemampuannya yang fleksibel untuk representasi graf, perhitungan heuristik, dan simulasi sistem pendukung keputusan.
 
 ---
