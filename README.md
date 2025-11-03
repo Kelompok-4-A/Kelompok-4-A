@@ -9,12 +9,6 @@
 Dalam organisasi besar, proses pengambilan keputusan strategis sering kali melibatkan banyak departemen, data yang kompleks, serta tujuan yang saling berkaitan.  
 Untuk mengoptimalkan proses ini, **Algoritma A\*** digunakan sebagai pendekatan **heuristik** yang mampu menemukan jalur keputusan paling efisien dalam sistem organisasi.  
 
-Pendekatan **Divide and Conquer** menggambarkan bagaimana organisasi besar dapat menyelesaikan masalah secara terstruktur:  
-
-1️⃣ **DIVIDE** – Membagi organisasi menjadi beberapa departemen atau tim yang fokus pada permasalahan spesifik.  
-2️⃣ **CONQUER** – Setiap tim menyelesaikan masalahnya masing-masing secara mandiri berdasarkan data dan keahlian bidangnya.  
-3️⃣ **COMBINE** – Hasil penyelesaian dari setiap tim dikombinasikan untuk membentuk strategi utama organisasi.  
-
 Konsep ini merepresentasikan prinsip kerja **Algoritma A\*** yang mencari jalur terbaik dari kondisi awal (*masalah*) menuju kondisi akhir (*solusi optimal*) dengan mempertimbangkan **biaya aktual** dan **perkiraan biaya ke depan**.
 
 ---
