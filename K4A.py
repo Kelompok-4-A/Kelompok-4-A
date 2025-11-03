@@ -13,7 +13,7 @@ graph = {
 
 # Heuristik (perkiraan jarak/biaya ke tujuan)
 # Semakin kecil nilai, semakin dekat ke "Selesai"
-heuristic = {
+h = {
     'Mulai': 10,
     'Analisis': 8,
     'Pilih Vendor': 6,
@@ -25,36 +25,34 @@ heuristic = {
 }
 
 def a_star(start, goal):
-    open_set = {start}                # node yang akan dievaluasi
-    came_from = {}                    # menyimpan jalur terbaik
-    g_score = {start: 0}              # biaya aktual dari start ke node
-    f_score = {start: heuristic[start]}  # perkiraan total biaya (g + h)
+    open_nodes = {start}          # node yang akan dievaluasi
+    previous = {}                 # menyimpan jalur terbaik
+    g = {start: 0}                # g(n): biaya aktual dari start ke node
+    f = {start: h[start]}         # f(n): total biaya perkiraan (g + h)
 
-    while open_set:
-        # ambil node dengan nilai f_score terkecil
-        current = min(open_set, key=lambda x: f_score.get(x, float('inf')))
-
+    while open_nodes:  # ← benar, sejajar dengan kode di atasnya
+        current = min(open_nodes, key=lambda x: f.get(x, float('inf')))
         if current == goal:
             # rekonstruksi jalur
             path = []
-            while current in came_from:
+            while current in previous:
                 path.append(current)
-                current = came_from[current]
+                current = previous[current]
             path.append(start)
             path.reverse()
-            return path, g_score[goal]
+            return path, g[goal]
 
-        open_set.remove(current)
+        open_nodes.remove(current)
 
         # jelajahi tetangga node saat ini
         for neighbor, cost in graph.get(current, {}).items():
-            tentative_g = g_score[current] + cost
+           tentative_g = g[current] + cost  # hitung g(n)
 
-            if tentative_g < g_score.get(neighbor, float('inf')):
-                came_from[neighbor] = current
-                g_score[neighbor] = tentative_g
-                f_score[neighbor] = tentative_g + heuristic[neighbor]
-                open_set.add(neighbor)
+           if tentative_g < g.get(neighbor, float('inf')):
+                previous[neighbor] = current
+                g[neighbor] = tentative_g
+                f[neighbor] = tentative_g + h[neighbor]  # f(n) = g(n) + h(n)
+                open_nodes.add(neighbor)
 
     return None, float('inf')  # tidak ada jalur ditemukan
 
@@ -71,3 +69,4 @@ if path:
     print("Total biaya :", total_cost)
 else:
     print("Tidak ada jalur ditemukan.")
+
