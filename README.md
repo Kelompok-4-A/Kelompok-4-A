@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Latar Belakang Singkat  
+## 📖 Latar Belakang Singka
 
 Dalam organisasi besar, proses pengambilan keputusan strategis sering kali melibatkan banyak departemen, data yang kompleks, serta tujuan yang saling berkaitan.  
 Untuk mengoptimalkan proses ini, **Algoritma A\*** digunakan sebagai pendekatan **heuristik** yang mampu menemukan jalur keputusan paling efisien dalam sistem organisasi.  
